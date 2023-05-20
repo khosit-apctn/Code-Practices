@@ -491,17 +491,40 @@
 
 # Solution.maxProfit(prices = [7,1,5,3,6,4])
 
-class Solution:
-    def pivotIndex(nums) -> int:
-        new = [0]+nums+[0]
-        print(nums)
-        for i ,j  in enumerate(nums) :
-        #     l+=j
-        #     print(l)
+
+
+
+def countDuplicate(numbers) :
+    print(numbers)
+    nums = set(numbers)
+    print(nums)
+    a =tem = 0 
+
+
+    for i in nums:
+        tem = numbers.count(i)
+        if tem >1:
+            a+=1
+    print(a)
+    return a
+
+countDuplicate(numbers= [1,1,1,1,1,2,2,5,4])
+
+
+
+
+
+# class Solution:
+#     def pivotIndex(nums) -> int:
+#         new = [0]+nums+[0]
+#         print(nums)
+#         for i ,j  in enumerate(nums) :
+#         #     l+=j
+#         #     print(l)
             
 
             
 
 
-Solution.pivotIndex(nums = [1,7,3,6,5,6])
+# Solution.pivotIndex(nums = [1,7,3,6,5,6])
         
