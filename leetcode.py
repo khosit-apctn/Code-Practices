@@ -495,18 +495,21 @@
 
 
 def countDuplicate(numbers) :
-    print(numbers)
-    nums = set(numbers)
-    print(nums)
-    a =tem = 0 
+    # print(numbers)
+    # nums = set(numbers)
+    # print(nums)
+    # a =tem = 0 
 
+    # for i in nums:
+    #     tem = numbers.count(i)
+    #     if tem >1:
+    #         a+=1
+    # print(a)
+    # return a
+    # Nested loop with condition in one line
+    result = [x * y for x in range(1, 5) for y in range(1, 5) if x + y > 5]
+    print(result)
 
-    for i in nums:
-        tem = numbers.count(i)
-        if tem >1:
-            a+=1
-    print(a)
-    return a
 
 countDuplicate(numbers= [1,1,1,1,1,2,2,5,4])
 
