@@ -1,9 +1,3 @@
-import math
-import os
-import random
-import re
-import sys
-
 # def compareTriplets(a, b):
     # Alice = 0 
     # Bob = 0
