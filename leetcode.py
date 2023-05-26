@@ -194,29 +194,30 @@
 
 
 # class Solution:
-    # def removeDuplicates(nums:list[int]):
-    #     if not nums:
-    #         return 0
+#     def removeDuplicates(nums:list[int]):
+#         if not nums:
+#             return 0
 
-    #     i = 0
-    #     for j in range(1, len(nums)):
-    #         if nums[j] != nums[i]:
-    #             i += 1
-    #             nums[i] = nums[j]
+#         i = 0
+#         for j in range(1, len(nums)):
+#             if nums[j] != nums[i]:
+#                 i += 1
+#                 nums[i] = nums[j]
         
-    #     return i + 1
+#         return i + 1
 
 
-    # nums = [1,1,2]# Input array
-    # expectedNums = [1, 2] # The expected answer with correct length
+#     nums = [1,1,2]# Input array
+#     expectedNums = [1, 2] # The expected answer with correct length
 
-    # k = removeDuplicates(nums) # Calls your implementation
-    # # print(k)
-    # k == len(expectedNums)
-    # for i in range(k):
-    #     nums[i] == expectedNums[i]
-    #     print(f"nums[{i}] = {nums[i]}, expectedNums[{i}] = {expectedNums[i]}") # Debugging statement
+#     k = removeDuplicates(nums) # Calls your implementation
+#     # print(k)
+#     k == len(expectedNums)
+#     for i in range(k):
+#         nums[i] == expectedNums[i]
+#         print(f"nums[{i}] = {nums[i]}, expectedNums[{i}] = {expectedNums[i]}") # Debugging statement
 
+# Solution.removeDuplicates(nums = [0,0,1,1,1,2,2,3,3,4])
     
 # def containsDuplicate(nums) -> bool:
 #         return len(set(nums))!=len(nums)
@@ -493,38 +494,80 @@
 
 
 
+# scb
+# def countDuplicate(numbers) :
+#     # print(numbers)
+#     # nums = set(numbers)
+#     # print(nums)
+#     # a = tem = 0 
+#     # for i in nums:
+#     #     tem = numbers.count(i)
+#     #     if tem >1:
+#     #         a+=1
+#     # print(a)
+#     print(sum(numbers.count(i) > 1 for i in set(numbers)))
+#     # return a
 
-def countDuplicate(numbers) :
-    # print(numbers)
-    # nums = set(numbers)
-    # print(nums)
-    # a = tem = 0 
-    # for i in nums:
-    #     tem = numbers.count(i)
-    #     if tem >1:
-    #         a+=1
-    # print(a)
-    print(sum(numbers.count(i) > 1 for i in set(numbers)))
-    # return a
-
-
-countDuplicate(numbers= [1,1,1,1,1,2,2,5,4])
-
-
-
+# countDuplicate(numbers= [1,1,1,1,1,2,2,5,4])
 
 
 # class Solution:
-#     def pivotIndex(nums) -> int:
-#         new = [0]+nums+[0]
+#     def removeDuplicates( nums) -> int:
+#         nums[:] = sorted(set(nums))
 #         print(nums)
-#         for i ,j  in enumerate(nums) :
-#         #     l+=j
-#         #     print(l)
-            
+#         return len(nums)
 
-            
-
-
-# Solution.pivotIndex(nums = [1,7,3,6,5,6])
         
+# Solution.removeDuplicates(nums = [1,1,2])
+# class Solution:
+#     def removeElement( nums, val: int) -> int:
+#         while val in nums:
+#             nums.remove(val)
+  
+# Solution.removeElement(nums = [3,2,2,3], val = 3) 
+
+
+# class Solution:
+#     def addBinary( a, b) -> str:
+#         return bin(int (a,2) + int(b,2))[2:]
+# Solution.addBinary(a = "11", b = "1")
+
+
+# class Solution:
+#     def mySqrt(x: int) -> int:
+#         # return int(x**0.5)
+#         a = 0
+#         while a * a <= x:
+#             a += 1
+#         print(a - 1)
+#         return a - 1
+# Solution.mySqrt(x = 4)
+
+# scb
+# def fibonacci (n):
+
+#     # 1
+#     # if n <= 0:
+#     #     return []
+#     # elif n == 1:
+#     #     return [0]
+#     # elif n == 2:
+#     #     return [0, 1]
+#     # ans = [0,1]
+#     # for i in range(n-2):
+#     #     num = ans[-1] + ans[-2]
+#     #     ans.append(num)
+#     #     return ans
+
+#     # 2
+#     # fib = [0, 1]
+#     # for i in range(2, n):
+#     #     fib.append(fib[-1] + fib[-2])
+#     # print(fib[:n])
+#     # return fib[:n]
+
+#     # 3
+#     fib = [0, 1]
+#     [fib.append(fib[-1] + fib[-2]) for _ in range(2, n)]
+#     print(fib[:n])
+# fibonacci(n=0)
