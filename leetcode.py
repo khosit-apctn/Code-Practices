@@ -571,3 +571,100 @@
 #     [fib.append(fib[-1] + fib[-2]) for _ in range(2, n)]
 #     print(fib[:n])
 # fibonacci(n=0)
+
+
+
+# def carParkingRoof(cars, k):
+#     cars.sort()
+#     b = []
+#     b.append(9999999999999999)
+#     for i in range(len(cars)-k-1):
+#         b.append(cars[i+k-1]-cars[k-1]+1)
+#     print(min(b))
+
+# carParkingRoof(cars=[2, 10, 8, 17 ,3,13] , k=4)
+
+
+# LooLooTech
+
+# def count_pairs (number_list, power, distance):
+#     count = 0  
+#     l_resulte = []
+#     squared = [num**power for num in number_list]
+#     # print(squared)
+
+#     for i in range(len(squared)):
+#         # print(squared[i] % power)
+#         for j in range(i+1, len(squared)):
+#             # print(squared[i],squared[j])
+#             if squared[i] % power == 0 or squared[j] % power ==0:
+#                 if abs(squared[i] - squared[j]) <= distance:
+#                     count += 1
+#                     l_resulte.append((number_list[i],number_list[j]))
+    
+#     print(l_resulte)
+#     print(count)
+	
+# count_pairs([1,2,3,4,6,10], 3, 200)
+
+
+# def find_max_ngram (text, length):
+#     T_ngram = {}
+#     count = 0
+#     ans_ngram = ""
+#     # print("abcx"  < "bcax")
+#     for i in range(len(text) - length + 1):
+
+#         ngram = text[i:i+length]
+#         # print(ngram)
+#         if ngram in T_ngram:
+#             T_ngram [ngram] += 1
+#         else:
+#             T_ngram[ngram]=1
+        
+#         if T_ngram[ngram] > count:
+#             count = T_ngram[ngram]
+#             ans_ngram = ngram
+#         elif T_ngram[ngram] == count and ngram < ans_ngram:
+#             ans_ngram = ngram
+#     print(ans_ngram)
+
+# find_max_ngram ("xbcxbcaxbcaxb", 4)
+
+# def check_perfect_list(numbers, distance):
+#     if len(numbers) < distance:
+#         return False
+
+#     for i in range(len(numbers) - distance +1):
+
+#         next = numbers[i+1:i+3]
+#         print(next)
+#         for num in next:
+#             print(num-numbers[i])
+#             if num - numbers[i] > distance:
+#                 return False
+
+#     return True
+
+# check_perfect_list([1, 4, 3, 2, 3], 3)
+
+class Solution:
+    def shortestPathBinaryMatrix(grid) -> int:
+        edge = -1
+        count = 0
+        margin = []
+        m=k=-1
+        for i ,value in enumerate(grid):
+            for j , border in enumerate(value):
+                if border==0:
+                    margin.append([i,j])
+                    
+        print(margin)
+        for i , value in enumerate(margin):
+            print(value[0][0])
+            
+        # edge = count
+        # print(edge) 
+
+
+Solution.shortestPathBinaryMatrix(grid =[[0,0,0],[1,1,0],[1,1,0]])
