@@ -559,20 +559,21 @@ def fibonacci (n):
     # for i in range(n-2):
     #     num = ans[-1] + ans[-2]
     #     ans.append(num)
+    #     print(ans)
     #     return ans
 
     # 2
-    # fib = [0, 1]
-    # for i in range(2, n):
-    #     fib.append(fib[-1] + fib[-2])
-    # print(fib[:n])
-    # return fib[:n]
+    fib = [0, 1]
+    for i in range(2, n):
+        fib.append(fib[-1] + fib[-2])
+    print(fib)
+    return fib[:n]
 
     # 3
-    fib = [0, 1]
-    [fib.append(fib[-1] + fib[-2]) for _ in range(2, n)]
-    print(fib[:n])
-# fibonacci(n=0)
+    # fib = [0, 1]
+    # [fib.append(fib[-1] + fib[-2]) for _ in range(2, n)]
+    # print(fib[:n])
+fibonacci(n=4)
 
 
 
@@ -672,3 +673,77 @@ class Solution:
 
 
 # Solution.shortestPathBinaryMatrix(grid =[[0,0,0],[1,1,0],[1,1,0]])
+
+class Solution:
+    def fizzBuzz(n):
+        for i in range(1, n+1):
+            if i % 3 == 0 and i % 5 == 0:
+                print("FizzBuzz")
+            elif i % 3 == 0:
+                print("Fizz")
+            elif i % 5 == 0:
+                print("Buzz")
+            else:
+                print(i)
+# Solution.fizzBuzz(n=15)
+
+def minTime(processorTime, taskTime):
+    processorTime.sort()  
+    taskTime.sort()
+    taskTime.reverse()  
+    # print(processorTime,taskTime)
+
+    finish_time = 0
+    max_f = [0]
+    for i in range(len(processorTime)):
+        if i == 0 :
+            finish_time = processorTime[i] + taskTime[i]
+            max_f.append(finish_time)
+        else:
+            finish_time = processorTime[i] + taskTime[int(len(taskTime)/2)]
+            max_f.append(finish_time)
+        print(max(max_f))
+        
+    # print(max(finish_time))
+        # finish_time.append(processorTime[i] + taskTime[i])
+        # print(finish_time)
+        # max_time =max(finish_time)
+        # print(max_time)
+    
+
+# def minTime(processorTime, taskTime):
+#     n = len(processorTime)
+#     m = len(taskTime)
+#     taskTime.sort(reverse=True)  # Sort task times in descending order
+
+#     # Assign tasks to processors
+#     processors = [[] for _ in range(n)]
+#     for i in range(m):
+#         processors[i % n].append(taskTime[i])
+
+#     # Calculate the finish time for each processor
+#     finish_times = [0] * n
+#     for i in range(n):
+#         processors[i].sort(reverse=True)  # Sort task times for each processor
+#         finish_times[i] = processorTime[i] + sum(processors[i][:4])
+
+#     print(max(finish_times))
+#     return max(finish_times)  # Return the maximum finish time
+
+
+
+
+# minTime(processorTime = [10,20], taskTime=[2, 3, 1,2,5, 8, 4, 3])
+
+
+def minimizeBias(ratings):
+    ratings.sort() 
+    total_bias = 0
+
+    for i in range(0, len(ratings), 2):
+        bias = ratings[i+1] - ratings[i]  
+        total_bias += bias
+    print(total_bias)
+    return total_bias
+# minimizeBias(ratings=[2,4,5,3,7,8])
+

@@ -88,3 +88,6 @@ def check_perfect_list_correct(numbers, distance):
     return True
 
 # check_perfect_list_correct([1, 4, 3, 2, 6], 3)
+
+
+
